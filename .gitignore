@@ -26,3 +26,4 @@ FKC_experiment/slurm*
 Annual_Ensembles/*
 Annual_Runs/*
 Five_Year_Runs/*
+*.pdf
