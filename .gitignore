@@ -31,3 +31,5 @@ Five_Year_Runs/*
 *.xlsx
 *.Rhistory
 *.xls
+*.xlsm
+*.pkl
