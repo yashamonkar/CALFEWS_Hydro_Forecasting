@@ -27,3 +27,7 @@ Annual_Ensembles/*
 Annual_Runs/*
 Five_Year_Runs/*
 *.pdf
+*.csv
+*.xlsx
+*.Rhistory
+*.xls
