@@ -23,3 +23,6 @@ out*.txt
 slurm*
 FKC_experiment/slurm*
 *_tmp.sh
+Annual_Ensembles/*
+Annual_Runs/*
+Five_Year_Runs/*
