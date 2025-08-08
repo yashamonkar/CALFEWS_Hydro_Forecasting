@@ -24,7 +24,7 @@ slurm*
 FKC_experiment/slurm*
 *_tmp.sh
 Annual_Ensembles/*
-Annual_Runs/*
+Annual_Runs/results/*
 Five_Year_Runs/*
 *.pdf
 *.csv
