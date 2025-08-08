@@ -25,7 +25,9 @@ FKC_experiment/slurm*
 *_tmp.sh
 Annual_Ensembles/*
 Annual_Runs/results/*
-Five_Year_Runs/*
+Five_Year_Runs/dry_start*
+Five_Year_Runs/results*
+Five_Year_Runs/wet_start*
 *.pdf
 *.csv
 *.xlsx
