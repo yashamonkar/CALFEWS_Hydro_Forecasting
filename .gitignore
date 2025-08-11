@@ -28,6 +28,7 @@ Annual_Runs/results/*
 Five_Year_Runs/dry_start*
 Five_Year_Runs/results*
 Five_Year_Runs/wet_start*
+WAPA_CVP_Manuscript_Analysis/CALFEWS_Files*
 *.pdf
 *.csv
 *.xlsx

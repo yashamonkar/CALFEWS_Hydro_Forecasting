@@ -635,27 +635,27 @@ cdef class Reservoir():
 	
     if y < 2010:
       if self.forecastWYT == "C":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
       elif self.forecastWYT == "D":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
       elif self.forecastWYT == "BN":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
       elif self.forecastWYT == "AN":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
       else:
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
 
     else:
       if self.forecastWYT == "C":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
       elif self.forecastWYT == "D":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
       elif self.forecastWYT == "BN":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
       elif self.forecastWYT == "AN":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
       else:
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
 		
     if m == 10:
       if self.S[t] < 1300:

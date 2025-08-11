@@ -16019,7 +16019,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
  * 
  *     if y < 2010:             # <<<<<<<<<<<<<<
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  */
   __pyx_t_4 = PyObject_RichCompare(__pyx_v_y, __pyx_int_2010, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 636, __pyx_L1_error)
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 636, __pyx_L1_error)
@@ -16030,7 +16030,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
  * 
  *     if y < 2010:
  *       if self.forecastWYT == "C":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "D":
  */
     __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_self->forecastWYT, __pyx_n_u_C, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 637, __pyx_L1_error)
@@ -16040,11 +16040,11 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
       /* "calfews_src/reservoir_cy.pyx":638
  *     if y < 2010:
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)             # <<<<<<<<<<<<<<
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  */
-      __pyx_t_5 = 0x15E;
+      __pyx_t_5 = 50;
       __pyx_t_6 = 0x578;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16110,7 +16110,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
  * 
  *     if y < 2010:
  *       if self.forecastWYT == "C":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "D":
  */
       goto __pyx_L5;
@@ -16118,9 +16118,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
     /* "calfews_src/reservoir_cy.pyx":639
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "D":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "BN":
  */
     __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_v_self->forecastWYT, __pyx_n_u_D, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 639, __pyx_L1_error)
@@ -16128,13 +16128,13 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
     if (__pyx_t_1) {
 
       /* "calfews_src/reservoir_cy.pyx":640
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)             # <<<<<<<<<<<<<<
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  */
-      __pyx_t_5 = 0x15E;
+      __pyx_t_5 = 50;
       __pyx_t_6 = 0x578;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16198,9 +16198,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
       /* "calfews_src/reservoir_cy.pyx":639
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "D":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "BN":
  */
       goto __pyx_L5;
@@ -16208,9 +16208,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
     /* "calfews_src/reservoir_cy.pyx":641
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "BN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "AN":
  */
     __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_self->forecastWYT, __pyx_n_u_BN, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 641, __pyx_L1_error)
@@ -16218,13 +16218,13 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
     if (__pyx_t_2) {
 
       /* "calfews_src/reservoir_cy.pyx":642
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)             # <<<<<<<<<<<<<<
  *       elif self.forecastWYT == "AN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  */
-      __pyx_t_5 = 0x15E;
+      __pyx_t_5 = 50;
       __pyx_t_6 = 0x578;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16288,9 +16288,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
       /* "calfews_src/reservoir_cy.pyx":641
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "BN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "AN":
  */
       goto __pyx_L5;
@@ -16298,9 +16298,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
     /* "calfews_src/reservoir_cy.pyx":643
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "AN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       else:
  */
     __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_v_self->forecastWYT, __pyx_n_u_AN, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 643, __pyx_L1_error)
@@ -16308,13 +16308,13 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
     if (__pyx_t_1) {
 
       /* "calfews_src/reservoir_cy.pyx":644
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "AN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)             # <<<<<<<<<<<<<<
  *       else:
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  */
-      __pyx_t_5 = 0x15E;
+      __pyx_t_5 = 50;
       __pyx_t_6 = 0x578;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16378,23 +16378,23 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
       /* "calfews_src/reservoir_cy.pyx":643
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       elif self.forecastWYT == "AN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       else:
  */
       goto __pyx_L5;
     }
 
     /* "calfews_src/reservoir_cy.pyx":646
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  *       else:
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)             # <<<<<<<<<<<<<<
  * 
  *     else:
  */
     /*else*/ {
-      __pyx_t_5 = 0x15E;
+      __pyx_t_5 = 50;
       __pyx_t_6 = 0x578;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16463,7 +16463,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
  * 
  *     if y < 2010:             # <<<<<<<<<<<<<<
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),350)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
  */
     goto __pyx_L4;
   }
@@ -16472,7 +16472,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
  * 
  *     else:
  *       if self.forecastWYT == "C":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "D":
  */
   /*else*/ {
@@ -16483,11 +16483,11 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
       /* "calfews_src/reservoir_cy.pyx":650
  *     else:
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)             # <<<<<<<<<<<<<<
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  */
-      __pyx_t_5 = 0xFA;
+      __pyx_t_5 = 0x96;
       __pyx_t_6 = 0x2BC;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16553,7 +16553,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
  * 
  *     else:
  *       if self.forecastWYT == "C":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "D":
  */
       goto __pyx_L6;
@@ -16561,9 +16561,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
     /* "calfews_src/reservoir_cy.pyx":651
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "D":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "BN":
  */
     __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_v_self->forecastWYT, __pyx_n_u_D, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 651, __pyx_L1_error)
@@ -16571,13 +16571,13 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
     if (__pyx_t_1) {
 
       /* "calfews_src/reservoir_cy.pyx":652
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)             # <<<<<<<<<<<<<<
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  */
-      __pyx_t_5 = 0xFA;
+      __pyx_t_5 = 0x96;
       __pyx_t_6 = 0x2BC;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16641,9 +16641,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
       /* "calfews_src/reservoir_cy.pyx":651
  *       if self.forecastWYT == "C":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "D":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "BN":
  */
       goto __pyx_L6;
@@ -16651,9 +16651,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
     /* "calfews_src/reservoir_cy.pyx":653
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "BN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "AN":
  */
     __pyx_t_1 = (__Pyx_PyUnicode_Equals(__pyx_v_self->forecastWYT, __pyx_n_u_BN, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 653, __pyx_L1_error)
@@ -16661,13 +16661,13 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
     if (__pyx_t_2) {
 
       /* "calfews_src/reservoir_cy.pyx":654
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)             # <<<<<<<<<<<<<<
  *       elif self.forecastWYT == "AN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  */
-      __pyx_t_5 = 0xFA;
+      __pyx_t_5 = 0x96;
       __pyx_t_6 = 0x2BC;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16731,9 +16731,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
       /* "calfews_src/reservoir_cy.pyx":653
  *       elif self.forecastWYT == "D":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "BN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "AN":
  */
       goto __pyx_L6;
@@ -16741,9 +16741,9 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
     /* "calfews_src/reservoir_cy.pyx":655
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "AN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       else:
  */
     __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_v_self->forecastWYT, __pyx_n_u_AN, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 655, __pyx_L1_error)
@@ -16751,13 +16751,13 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
     if (__pyx_t_1) {
 
       /* "calfews_src/reservoir_cy.pyx":656
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "AN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)             # <<<<<<<<<<<<<<
  *       else:
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  */
-      __pyx_t_5 = 0xFA;
+      __pyx_t_5 = 0x96;
       __pyx_t_6 = 0x2BC;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16821,23 +16821,23 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
 
       /* "calfews_src/reservoir_cy.pyx":655
  *       elif self.forecastWYT == "BN":
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       elif self.forecastWYT == "AN":             # <<<<<<<<<<<<<<
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       else:
  */
       goto __pyx_L6;
     }
 
     /* "calfews_src/reservoir_cy.pyx":658
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  *       else:
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)             # <<<<<<<<<<<<<<
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)             # <<<<<<<<<<<<<<
  * 
  *     if m == 10:
  */
     /*else*/ {
-      __pyx_t_5 = 0xFA;
+      __pyx_t_5 = 0x96;
       __pyx_t_6 = 0x2BC;
       if (unlikely(__pyx_v_self->S == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -16904,7 +16904,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
   __pyx_L4:;
 
   /* "calfews_src/reservoir_cy.pyx":660
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  * 
  *     if m == 10:             # <<<<<<<<<<<<<<
  *       if self.S[t] < 1300:
@@ -17013,7 +17013,7 @@ static PyObject *__pyx_pf_11calfews_src_12reservoir_cy_9Reservoir_12compute_dive
     __pyx_L8:;
 
     /* "calfews_src/reservoir_cy.pyx":660
- *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),250)
+ *         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
  * 
  *     if m == 10:             # <<<<<<<<<<<<<<
  *       if self.S[t] < 1300:
