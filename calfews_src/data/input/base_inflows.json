@@ -239,7 +239,7 @@
 	  "5yr_run": 2018,
 	  "5yr_run_dry": 2015,
 	  "5yr_run_wet": 2011,
-	  "CDEC_annual_ensembles": 2016
+	  "CDEC_annual_ensembles": 2021
       },
     "downscaled_19952005":{
       "VIC": 1996,
@@ -340,7 +340,7 @@
 	  "5yr_run": 2023,
 	  "5yr_run_dry": 2020,
 	  "5yr_run_wet": 2016,
-	  "CDEC_annual_ensembles": 2017
+	  "CDEC_annual_ensembles": 2022
       },
     "downscaled_19952005":{
       "VIC": 2005,
@@ -441,7 +441,7 @@
 	  "5yr_run": "10/1/2018",
 	  "5yr_run_dry": "10/1/2015",
 	  "5yr_run_wet": "10/1/2011",
-	  "CDEC_annual_ensembles": "10/1/2016"
+	  "CDEC_annual_ensembles": "10/1/2021"
       },
     "downscaled_19952005":{
       "VIC": "1/1/1950",
@@ -542,7 +542,7 @@
 	  "5yr_run": "9/30/2023",
 	  "5yr_run_dry": "9/30/2020",
 	  "5yr_run_wet": "9/30/2016",
-	  "CDEC_annual_ensembles": "9/30/2017"
+	  "CDEC_annual_ensembles": "9/30/2022"
       },
     "downscaled_19952005":{
       "VIC": "12/31/2099", 
