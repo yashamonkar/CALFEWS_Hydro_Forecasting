@@ -10,7 +10,7 @@ Annual Hydropower Validation
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 
 
@@ -31,9 +31,9 @@ from matplotlib.gridspec import GridSpec
 
 
 #Extract custom functions
-from Annual_Runs.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
-from Annual_Runs.post_processing.functions.get_comparison_plots import get_comparison_plots
-from Annual_Runs.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_comparison_plots import get_comparison_plots
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
 
 
 #Hyper-parameters
@@ -50,7 +50,7 @@ input_data = pd.read_csv("calfews_src/data/input/annual_runs/cord-sim_realtime.c
 input_data.index = pd.to_datetime(input_data.index)
 
 #Read the WAPA generation dataset
-eia = pd.read_csv('Yash/EIA/EIA_Monthy_Gen.csv', index_col=0)
+eia = pd.read_csv('WAPA_CVP_Manuscript_Analysis/EIA/EIA_Monthy_Gen.csv', index_col=0)
 eia = eia/1000
 eia.index = pd.to_datetime(eia.index)
 eia = eia.drop(['W R Gianelli', 'ONeill'], axis=1)
