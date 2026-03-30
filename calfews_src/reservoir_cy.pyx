@@ -64,12 +64,20 @@ cdef class Reservoir():
       #San Luis Reservoir is off-line so it doesn't need the full reservoir class parameter set contained in the KEY_properties.json files
       #self.Q = model.df[0]'HRO_pump'] * cfs_tafd
       self.dead_pool = 40
-      self.S[0] = 740.4
+      #self.S[0] = 740.4
+      storage_start_date = model.df[0].index[0]
+      storage_start_index = model.df_short[0].index.get_loc(storage_start_date)
+      self.S[0] = model.df_short[0]['%s_storage' % key].iloc[storage_start_index] / 1000.0
     elif self.key == "SLF":
       #San Luis - Federal portion
       #self.Q = model.df[0]'TRP_pump'] * cfs_tafd
       self.dead_pool = 40
-      self.S[0] = 174.4
+      #self.S[0] = 174.4
+      storage_start_date = model.df[0].index[0]
+      storage_start_index = model.df_short[0].index.get_loc(storage_start_date)
+      self.S[0] = model.df_short[0]['%s_storage' % key].iloc[storage_start_index] / 1000.0
+	
+	    
     elif self.key != "SNL":
       #for remaining reservoirs, load parameters from KEY_properties.json file (see reservoir\readme.txt
       for k,v in json.load(open('calfews_src/reservoir/%s_properties.json' % key)).items():
@@ -374,7 +382,7 @@ cdef class Reservoir():
     self.envmin -= self.consumed_releases
 
     if self.key == "TRT":
-      self.restoration[t] = self.envmin # #This sould be self.reservoir_target_release
+      self.restoration[t] = self.envmin # #This could be self.reservoir_target_release if fcr releases are not a part of the restoration flow. 
 	      
 
 
@@ -635,11 +643,11 @@ cdef class Reservoir():
 	
     if y < 2010:
       if self.forecastWYT == "C":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
+        total_diversion = max(min(total_diversion, 1400),350)
       elif self.forecastWYT == "D":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
+        total_diversion = max(min(total_diversion, 1400),350)
       elif self.forecastWYT == "BN":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
+        total_diversion = max(min(total_diversion, 1400),350)
       elif self.forecastWYT == "AN":
         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 1400),50)
       else:
@@ -647,15 +655,15 @@ cdef class Reservoir():
 
     else:
       if self.forecastWYT == "C":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
+        total_diversion = max(min(total_diversion, 1400),350)
       elif self.forecastWYT == "D":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
+        total_diversion = max(min(total_diversion, 1400),350)
       elif self.forecastWYT == "BN":
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
+        total_diversion = max(min(total_diversion, 1400),350)
       elif self.forecastWYT == "AN":
         total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
       else:
-        total_diversion = max(min(total_diversion + self.S[eos_day] - self.carryover_target[self.forecastWYT], 700),150)
+        total_diversion = max(min(total_diversion, 1400),350)
 		
     if m == 10:
       if self.S[t] < 1300:

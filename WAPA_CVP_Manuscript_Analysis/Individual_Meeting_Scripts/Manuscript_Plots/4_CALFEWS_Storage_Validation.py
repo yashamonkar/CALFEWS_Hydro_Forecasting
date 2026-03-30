@@ -9,7 +9,7 @@ Figure 4 - Code for the CALFEWS Storage Validation Plots.
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 # import libraries
 import numpy as np
@@ -30,9 +30,9 @@ from scipy import stats
 import matplotlib.dates as mdates
 
 #Extract custom functions
-from Annual_Runs.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
-from Annual_Runs.post_processing.functions.get_comparison_plots import get_comparison_plots
-from Annual_Runs.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_comparison_plots import get_comparison_plots
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
 
 
 #Hyper-parameters
@@ -208,7 +208,7 @@ corr_trinity_storage = input_data_mean['TRT_storage'].corr(datDaily_mean['trinit
 # Shasta Storage (top-left)
 ax1.plot(input_data_mean.index, input_data_mean['SHA_storage']/1000, 'b-', linewidth=2, label="CDEC")
 ax1.plot(datDaily_mean.index, datDaily_mean['shasta_S'], 'r-', linewidth=2, label="CALFEWS")
-ax1.set_ylabel("Storage (TAF)", fontsize=26)
+ax1.set_ylabel("Reservoir Storage (TAF)", fontsize=26)
 ax1.set_xlabel("Year", fontsize=26)
 ax1.tick_params(axis='both', labelsize=18)
 ax1.set_ylim([500, 5200]) 
@@ -223,7 +223,7 @@ ax1.text(0.33, 0.92, f'r² = {corr_shasta_storage:.2f}', transform=ax1.transAxes
 # Trinity Storage (top-right)
 ax2.plot(input_data_mean.index, input_data_mean['TRT_storage']/1000, 'b-', linewidth=2, label="CDEC")
 ax2.plot(datDaily_mean.index, datDaily_mean['trinity_S'], 'r-', linewidth=2, label="CALFEWS")
-ax2.set_ylabel("Storage (TAF)", fontsize=26)
+ax2.set_ylabel("Reservoir Storage (TAF)", fontsize=26)
 ax2.set_xlabel("Year", fontsize=26)
 ax2.tick_params(axis='both', labelsize=18)
 ax2.set_ylim([0, 2900]) 

@@ -16,7 +16,7 @@ Statistical Forecast:
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 
 
@@ -48,7 +48,7 @@ input_data = pd.read_csv("calfews_src/data/input/annual_runs/cord-sim_realtime.c
 input_data.index = pd.to_datetime(input_data.index)
 
 #Read the WAPA generation dataset
-eia = pd.read_csv('Yash/EIA/EIA_Monthy_Gen.csv', index_col=0)
+eia = pd.read_csv('WAPA_CVP_Manuscript_Analysis/EIA/EIA_Monthy_Gen.csv', index_col=0)
 eia = eia/1000 #Convert to GWh
 eia.index = pd.to_datetime(eia.index)
 eia = eia.drop(['W R Gianelli', 'ONeill'], axis=1)
@@ -1005,7 +1005,10 @@ ax3.tick_params(axis='both', labelsize=18)
 ax3.grid(True, alpha=0.3)
 
 
-
+# Add panel labels
+for ax, label in zip([ax1, ax2, ax3], ['(A)', '(B)', '(C)']):
+    ax.text(-0.2, 1.05, label, transform=ax.transAxes,
+            fontsize=26, fontweight='bold', va='top', ha='left')
 
 # Legend (in ax1)
 blue_patch = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='blue', markersize=10, label='CALFEWS')

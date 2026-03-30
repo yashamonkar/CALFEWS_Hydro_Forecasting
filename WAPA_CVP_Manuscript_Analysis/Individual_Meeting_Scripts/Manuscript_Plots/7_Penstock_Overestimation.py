@@ -18,7 +18,7 @@ Input Data Sources:-
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 
 #Import Libraries
@@ -34,7 +34,7 @@ input_data.index = pd.to_datetime(input_data.index)
 
 
 #Historic Water Year Types 
-wy_types = pd.read_csv("Yash\Misc_Data\Water_Year_Types.csv", index_col = 0)
+wy_types = pd.read_csv("WAPA_CVP_Manuscript_Analysis\Misc_Data\Water_Year_Types.csv", index_col = 0)
 wy_types.index = pd.to_datetime(wy_types.index)
 wy_types = wy_types[wy_types.index > '1995-09-30']
 wy_types.index = wy_types.index + pd.offsets.MonthEnd(0) #Align index to the end of the month. 

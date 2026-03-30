@@ -11,7 +11,7 @@ Note:- THe first prefence and base resource data are added manually
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 
 
@@ -32,9 +32,9 @@ import matplotlib.dates as mdates
 from matplotlib.dates import DateFormatter
 
 #Extract custom functions
-from Annual_Runs.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
-from Annual_Runs.post_processing.functions.get_comparison_plots import get_comparison_plots
-from Annual_Runs.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_comparison_plots import get_comparison_plots
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
 
 
 #Hyper-parameters
@@ -45,7 +45,7 @@ input_data = pd.read_csv("calfews_src/data/input/annual_runs/cord-sim_realtime.c
 input_data.index = pd.to_datetime(input_data.index)
 
 #Read the WAPA generation dataset
-eia = pd.read_csv('Yash/EIA/EIA_Monthy_Gen.csv', index_col=0)
+eia = pd.read_csv('WAPA_CVP_Manuscript_Analysis/EIA/EIA_Monthy_Gen.csv', index_col=0)
 eia = eia/1000
 eia.index = pd.to_datetime(eia.index)
 eia = eia.drop(['W R Gianelli', 'ONeill'], axis=1)
@@ -53,7 +53,7 @@ eia['CVP_Gen'] = eia.sum(axis=1)
 eia = eia[eia.index > pd.Timestamp("2018-09-30")]
 eia = eia[eia.index < pd.Timestamp("2023-10-01")]
 
-#First Preference & COTP Losses
+#First Preference & COTP Losses --> Rolling twelce month forecast (Updated COPT and FU Load)
 fp_use = [17.8, 19.5, 20.6, 21.5, 19.5, 20.1, 17.3, 17.1, 17.4, 19.7, 19.3, 16.6]  #GWh/Month
 cotp_losses = [8.6, 10.4, 8, 8.6, 7.4, 9.5, 8.8, 16.3, 19.8, 16, 13.7, 13.6]
 fp_use = fp_use * 5
@@ -136,6 +136,7 @@ for i in range(len(all_data)):
     
     #Classify the values
     cvp_gen['San_Luis_Pump'] = san_luis_pump['San_Luis'] + san_luis_pump['Oneill']
+    cvp_gen['San_Luis_Storage'] = storage_input['San Luis']
     cvp_gen['Tracy_Pump'] = tracy_pump
     cvp_gen['Dos_Amigos'] = dos_amigos_pump
     cvp_gen['CVPT_Losses'] = 0.018*cvp_gen['CVP_Gen'] #1.8% Losses assumed

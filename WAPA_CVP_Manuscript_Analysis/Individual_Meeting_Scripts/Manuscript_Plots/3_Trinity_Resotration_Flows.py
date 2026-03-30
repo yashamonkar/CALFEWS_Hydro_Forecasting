@@ -9,7 +9,7 @@ Figure 3 - Script to plot Trinity Restoration flow based on ROD 2001.
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 
 
@@ -20,7 +20,7 @@ from datetime import datetime, timedelta
 import numpy as np
 
 # Read the CSV file
-df = pd.read_csv('Yash\Individual_Meeting_Scripts\Manuscript_Plots\Trinity_Flow_Schedule.csv') #Location to be changed.
+df = pd.read_csv('WAPA_CVP_Manuscript_Analysis\Individual_Meeting_Scripts\Manuscript_Plots\Trinity_Flow_Schedule.csv') #Location to be changed.
 
 # Set the 'Type' column as index
 df.set_index('Type', inplace=True)

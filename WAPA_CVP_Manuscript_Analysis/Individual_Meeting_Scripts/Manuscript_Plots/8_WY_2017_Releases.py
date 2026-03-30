@@ -10,7 +10,7 @@ Script to plot the results for the monthly uniform release assumptiosn
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 
 # import libraries
@@ -34,9 +34,9 @@ from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 
 #Extract custom functions
-from WAPA_Runs.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
-from WAPA_Runs.post_processing.functions.get_comparison_plots import get_comparison_plots
-from WAPA_Runs.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_comparison_plots import get_comparison_plots
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
 
 
 #Hyper-parameters
@@ -59,7 +59,7 @@ for year in range(1996, 2024):
     print(year)
     
     # Construct the path for each year
-    output_folder = f"WAPA_Runs/results/annual_runs/{year}/"
+    output_folder = f"Annual_Runs/results/annual_runs/{year}/"
     output_file = os.path.join(output_folder, 'results.hdf5')
     
     # Load the data for current year

@@ -16,7 +16,7 @@ Script to show the results for the ensemble forecasting for the meeting with ani
 
 # Set the working directory
 import os
-working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS'
+working_directory = r'C:\Users\amonkar\Documents\GitHub\CALFEWS_Hydro_Forecasting'
 os.chdir(working_directory)
 
 
@@ -37,9 +37,9 @@ from matplotlib.dates import DateFormatter
 
 
 #Extract custom functions
-from Annual_Runs.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
-from Annual_Runs.post_processing.functions.get_comparison_plots import get_comparison_plots
-from Annual_Runs.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CALFEWS_results import get_results_sensitivity_number_outside_model
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_comparison_plots import get_comparison_plots
+from WAPA_CVP_Manuscript_Analysis.post_processing.functions.get_CVP_hydro_gen import get_CVP_hydro_gen
 
 
 #Hyper-parameters
