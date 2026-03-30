@@ -31,6 +31,7 @@ Five_Year_Runs/wet_start*
 WAPA_CVP_Manuscript_Analysis/CALFEWS_Files*
 WAPA_CVP_Manuscript_Analysis/Individual_Meeting_Scripts/old_plots*
 WAPA_CVP_Manuscript_Analysis/Individual_Meeting_Scripts/Manuscript_Plots/old_code*
+WAPA_CVP_Manuscript_Analysis/
 *.pdf
 *.csv
 !calfews_src/data/input/cord-sim_realtime.csv
