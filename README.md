@@ -1,10 +1,10 @@
 # Rules-Based Systems Modeling for Hydropower Forecasting in Multi-Objective Reservoir Systems: Application to California's Central Valley Project
 This repository contains all code and data to replicate the study entitled, "Rules-Based Systems Modeling for Hydropower Forecasting in Multi-Objective Reservoir Systems: Application to California's Central Valley Project". 
-This work is currently under-peer review and will be available in form a pre-print. 
+This work is currently under-peer review at Water Resources Research and is available in form a pre-print here https://eartharxiv.org/repository/view/12884/. 
 To replicate the plots run the code in the folder, /Manuscript_Plots. 
 This runs the outputs from CALFEWS using simple Python code. 
 
-
+Citation for the current version - Amonkar, Yash Vijay, et al. "Rules-Based Systems Modeling for Hydropower Forecasting in Multi-Objective Reservoir Systems: Application to California's Central Valley Project." (2026).
 
 
 
