@@ -566,7 +566,10 @@ for ax, label in zip([ax1, ax2, ax3], ['(A)', '(B)', '(C)']):
 blue_patch = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='blue', markersize=10, label='CALFEWS')
 red_patch = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='red', markersize=10, label='Statistical (Ensemble)')
 green_patch = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='green', markersize=10, label='Statistical (Baseline)')
-ax3.legend(handles=[green_patch, red_patch, blue_patch], loc='upper left', fontsize=18, markerscale=1.5)
+
+ax1.legend(handles=[green_patch], loc='upper left', fontsize=17, markerscale=1.5)
+ax2.legend(handles=[red_patch], loc='upper left', fontsize=18, markerscale=1.5)
+ax3.legend(handles=[blue_patch], loc='upper left', fontsize=18, markerscale=1.5)
 
 plt.tight_layout()
 plt.show()
